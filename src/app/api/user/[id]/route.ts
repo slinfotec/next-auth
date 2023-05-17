@@ -1,5 +1,4 @@
 import { verifyJwt } from "@/lib/jwt";
-import prisma from "@/lib/prisma";
 import {pool} from "@/lib/db";
 
 export async function GET(request: Request, { params }: { params: { id: number } }) {
