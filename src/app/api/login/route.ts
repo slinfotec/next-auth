@@ -32,8 +32,8 @@ try {
   } else {
 
     const userPlainObject = {
-      name: body.username,
-      email: body.username,
+      name: "test Name",
+      email: "test emil",
       roll: "adminroll",
       // other relevant properties
     };
