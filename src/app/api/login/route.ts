@@ -32,9 +32,9 @@ try {
   } else {
 
     const userPlainObject = {
-      name: "test Name",
-      email: "test emil",
-      roll: "adminroll",
+      name: body.username,
+      email: body.username,
+      roll: "admin",
       // other relevant properties
     };
       const accessToken = signJwtAccessToken(userPlainObject);
