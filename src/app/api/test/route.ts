@@ -6,6 +6,8 @@ export async function GET(request: Request) {
   
   const accessToken = request.headers.get("authorization");
   if (!accessToken || !verifyJwt(accessToken)) {
+
+
     return new Response(
       JSON.stringify({
         error: "unauthorized",
@@ -14,6 +16,8 @@ export async function GET(request: Request) {
         status: 401,
       }
     );
+
+    
   }
  // const userPosts = await prisma.post.findMany({
  //   where: { authorId: +params.id },

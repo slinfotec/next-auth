@@ -17,10 +17,12 @@ export function signJwtAccessToken(payload: JwtPayload, options: SignOption = DE
 export function verifyJwt(token: string) {
   try {
     const secret_key = process.env.SECRET_KEY;
+    console.log(secret_key + "-- secret key")
     const decoded = jwt.verify(token, secret_key!);
+    console.log(decoded + " -- decode key")
     return decoded as JwtPayload;
   } catch (error) {
-    console.log(error);
+    console.log(error + "-- error secret");
     return null;
   }
 }
